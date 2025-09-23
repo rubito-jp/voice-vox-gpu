@@ -20,11 +20,22 @@ services:
     volumes:
       - voicevox_cache:/root/.cache/voicevox_engine
 
+  voicevox-wrapper:
+    build: ./wrapper
+    container_name: voicevox-wrapper
+    restart: unless-stopped
+    depends_on:
+      - voicevox-engine
+    environment:
+      - VOICEVOX_ENGINE_URL=http://voicevox-engine:50021
+    ports:
+      - "8000:8000"
+
   caddy:
     image: caddy:2.7.6-alpine
     restart: unless-stopped
     depends_on:
-      - voicevox-engine
+      - voicevox-wrapper
     ports:
       - "80:80"
       - "443:443"
