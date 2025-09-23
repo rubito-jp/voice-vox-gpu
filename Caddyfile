@@ -1,0 +1,3 @@
+﻿voicevox-test-00.lacchinh.com {
+    reverse_proxy voicevox-engine:50021
+}
