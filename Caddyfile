@@ -1,4 +1,3 @@
-﻿voicevox-test-00.lacchinh.com {
-    tls binhkid2@gmail.com
+﻿voicevox-test-00.rubito.jp { 
     reverse_proxy voicevox-wrapper:8000
 }
