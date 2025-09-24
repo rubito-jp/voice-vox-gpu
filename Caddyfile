@@ -1,4 +1,4 @@
-﻿voicevox-cc.lacchinh.com {
+﻿voicevox-alt.lacchinh.com {
     tls binhkid2@gmail.com
     reverse_proxy voicevox-wrapper:8000
 }
